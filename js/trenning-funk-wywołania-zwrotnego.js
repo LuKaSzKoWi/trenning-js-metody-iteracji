@@ -120,7 +120,7 @@ function calculateTotalPrice(orderedItems) {
   });
 
   return totalPrice;
-}, 
+} 
 
 // W tym kodzie:
 
@@ -146,3 +146,42 @@ function calculateTotalPrice(orderedItems) {
 // I tak dalej, aż do ostatniego elementu tablicy.
 // Każde wywołanie funkcji zwrotnej dodaje wartość item do totalPrice, co w efekcie daje sumę wszystkich elementów tablicy orderedItems.
 
+
+// ZADANIE #5
+
+// Funkcja filterArray(numbers, value) przyjmuje jako pierwszy parametr tablicę liczb numbers i zwraca nową tablicę,
+//   zawierającą tylko te elementy oryginalnej tablicy, które są większe niż wartość drugiego parametru value.
+//   Jeśli takie wartości nie zostaną znalezione, funkcja zwraca pustą tablicę.
+
+// Dokonaj refaktoryzacji funkcji w taki sposób, aby zamiast pętli for używała metody forEach.
+
+// Zadeklarowana została funkcja filterArray(numbers, value)
+// Do iteracji po tablicy numbers używana jest metoda forEach
+// Wywołanie funkcji filterArray([1, 2, 3, 4, 5], 3) zwraca [4, 5]
+// Wywołanie funkcji filterArray([1, 2, 3, 4, 5], 4) zwraca [5]
+// Wywołanie funkcji filterArray([1, 2, 3, 4, 5], 5) zwraca []
+// Wywołanie funkcji filterArray([12, 24, 8, 41, 76], 38) zwraca [41, 76]
+// Wywołanie funkcji filterArray([12, 24, 8, 41, 76], 20) zwraca [24, 41, 76]
+// Wywołanie funkcji z losowymi, ale poprawnymi argumentami zwraca poprawną wartość
+
+
+function filterArray(numbers, value) {
+  let filteredArray =[];
+
+  numbers.forEach(function(number) {
+    if (number > value) {
+      filteredArray.push(number);
+    }
+  });
+
+  return filteredArray;
+}
+
+// W powyższym kodzie:
+
+// Funkcja filterArray przyjmuje dwa parametry: numbers (tablica liczb) i value (liczba).
+// Tworzy nową tablicę filteredArray, która będzie przechowywać elementy spełniające warunek.
+// Używa metody forEach na tablicy numbers, przekazując jej funkcję callback. 
+// W każdej iteracji funkcja ta sprawdza, czy bieżący element(number) jest większy niż value.
+// Jeśli warunek jest spełniony, bieżący element jest dodawany do tablicy filteredArray.
+// Funkcja zwraca tablicę filteredArray, która zawiera wszystkie elementy z tablicy numbers większe niż value.
