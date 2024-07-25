@@ -50,4 +50,34 @@ const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
 
 const ascendingReleaseDates = releaseDates.toSorted((a, b) => a -b);
 
-const descendingReleaseDates = releaseDates.toSorted((a, b) => b -a);
+const descendingReleaseDates = releaseDates.toSorted((a, b) => b - a);
+
+
+// ZADANIE #3
+
+// Zmienna authors jest tablicą ciągów znaków obejmującą autorów książek.
+
+// Biblioteka online powinna wyświetlać książki posortowane według autora w kolejności alfabetycznej i odwrotnej kolejności alfabetycznej.
+// Dopełnij kod tak, aby zmienna authorsInAlphabetOrder otrzymywała kopię tablicy authors posortowaną alfabetycznie,
+//     a zmienna authorsInReversedOrder otrzymywała kopię posortowaną w odwrotnej kolejności alfabetycznej.
+
+// Zadeklarowana została zmienna authors
+// Wartością zmiennej authors jest tablica ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky", "Howard Lovecraft"]
+// Zadeklarowana została zmienna authorsInAlphabetOrder
+// Wartością zmiennej authorsInAlphabetOrder jest tablica ["Bernard Cornwell", "Fyodor Dostoevsky", "Howard Lovecraft", "Robert Sheckley", "Tanith Lee"]
+// Zadeklarowana została zmienna authorsInReversedOrder
+// Wartością zmiennej authorsInReversedOrder jest tablica ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
+// Użyta została metoda toSorted()
+
+
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+  "Howard Lovecraft",
+];
+
+const authorsInAlphabetOrder = authors.toSorted((a, b) => a.localeCompare(b));
+
+const authorsInReversedOrder = authors.toSorted((a, b) => b.localeCompare(a));
