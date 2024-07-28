@@ -130,5 +130,8 @@ const bookByAuthor = books.find(book => book.author === AUTHOR);
 // aby zwracała obiekt użytkownika, którego email(właściwość email) zgadza się z wartością drugiego parametru email.
 
 const getUserWithEmail = (users, email) => {
-  return users.find(user => user.email ===email);
+  return users.find(user => user.email === email);
 };
+
+
+
